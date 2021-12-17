@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rstudio:
+    build: .
+    image: tidyverse
+    container_name: R_datamix
+    environment: 
+      - PASSWORD=pass
+    ports:
+      - 8787:8787
+    volumes:
+      - /mnt/c/Users/xiang/DataMix:/home/rstudio/DataMix
+    tty: true
+    stdin_open: true
